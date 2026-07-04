@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard - Sistem Monitoring Stok Gudang</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo-area">
+
+<img src="assets/logo.png" class="logo">
+
+<h2>Monitoring Stok</h2>
+
+</div>
+
+<ul>
+
+<li class="active">
+<a href="dashboard.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="stock.html">
+<i class="fa-solid fa-boxes-stacked"></i>
+Kelola Stok
+</a>
+</li>
+
+<li>
+<a href="warehouse.html">
+<i class="fa-solid fa-warehouse"></i>
+Data Gudang
+</a>
+</li>
+
+<li>
+<a href="reports.html">
+<i class="fa-solid fa-file-lines"></i>
+Laporan
+</a>
+</li>
+
+<li>
+<a href="users.html">
+<i class="fa-solid fa-users"></i>
+Manajemen User
+</a>
+</li>
+
+<li>
+<a href="#" onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Dashboard</h1>
+
+<div class="user">
+
+<i class="fa-solid fa-circle-user"></i>
+
+<span id="namaUser"></span>
+
+</div>
+
+</div>
+
+<div class="card">
+<h3>Stok Masuk</h3>
+<h2 id="stokMasuk">0 Ton</h2>
+</div>
+
+<div class="card">
+<h3>Stok Keluar</h3>
+<h2 id="stokKeluar">0 Ton</h2>
+</div>
+
+<h3>Total Komoditas</h3>
+
+<h2 id="totalKomoditas">0</h2>
+
+</>
+
+<div class="card">
+
+<h3>Total Gudang</h3>
+
+<h2 id="totalGudang">0</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Total Stok</h3>
+
+<h2 id="totalStok">0 Ton</h2>
+
+</div>
+
+<div class="card">
+
+<h3>Stok Kritis</h3>
+
+<h2 id="stokKritis">0</h2>
+
+</div>
+
+</>
+
+<div class="notification" id="notifBox">
+
+<h3>🔔 Notifikasi</h3>
+
+<ul id="notifList">
+
+</ul>
+
+</div>
+
+<div class="chart-box">
+
+<h2>Grafik Stok</h2>
+
+<canvas id="chartStok"></canvas>
+
+</div>
+
+<div class="table-box">
+
+<h2>Stok Terbaru</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Komoditas</th>
+
+<th>Kategori</th>
+
+<th>Jumlah</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="dashboardTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

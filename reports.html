@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Laporan</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo-area">
+<img src="assets/logo.png" class="logo">
+<h2>Monitoring Stok</h2>
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="stock.html"><i class="fa-solid fa-boxes-stacked"></i> Kelola Stok</a></li>
+
+<li><a href="warehouse.html"><i class="fa-solid fa-warehouse"></i> Data Gudang</a></li>
+
+<li class="active"><a href="reports.html"><i class="fa-solid fa-file-lines"></i> Laporan</a></li>
+
+<li><a href="users.html"><i class="fa-solid fa-users"></i> Manajemen User</a></li>
+
+<li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Laporan Monitoring Stok</h1>
+
+</div>
+
+<div class="table-box">
+
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h2>Data Laporan</h2>
+
+<button onclick="downloadCSV()">
+
+Export CSV
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Komoditas</th>
+
+<th>Kategori</th>
+
+<th>Jumlah</th>
+
+<th>Jenis</th>
+
+<th>Tanggal</th>
+
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="laporanBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="js/reports.js"></script>
+
+</body>
+
+</html>

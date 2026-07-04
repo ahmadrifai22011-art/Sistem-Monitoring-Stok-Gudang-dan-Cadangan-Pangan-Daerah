@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Data Gudang</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo-area">
+<img src="assets/logo.png" class="logo">
+<h2>Monitoring Stok</h2>
+</div>
+
+<ul>
+
+<li><a href="dashboard.html"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+
+<li><a href="stock.html"><i class="fa-solid fa-boxes-stacked"></i> Kelola Stok</a></li>
+
+<li class="active"><a href="warehouse.html"><i class="fa-solid fa-warehouse"></i> Data Gudang</a></li>
+
+<li><a href="reports.html"><i class="fa-solid fa-file-lines"></i> Laporan</a></li>
+
+<li><a href="users.html"><i class="fa-solid fa-users"></i> User</a></li>
+
+<li><a href="#" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<div class="topbar">
+
+<h1>Data Gudang</h1>
+
+</div>
+
+<div class="card">
+
+<h3>Tambah Gudang</h3>
+
+<br>
+
+<input id="namaGudang" type="text" placeholder="Nama Gudang">
+
+<br><br>
+
+<input id="lokasiGudang" type="text" placeholder="Lokasi Gudang">
+
+<br><br>
+
+<input id="kapasitasGudang" type="number" placeholder="Kapasitas (Ton)">
+
+<br><br>
+
+<button onclick="simpanGudang()">
+
+Tambah Gudang
+
+</button>
+
+</div>
+
+<br>
+
+<div class="table-box">
+
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+
+<h2>Daftar Gudang</h2>
+
+<input
+type="text"
+id="searchGudang"
+placeholder="Cari Gudang..."
+onkeyup="cariGudang()"
+style="width:300px;padding:10px;border:1px solid #ccc;border-radius:8px;">
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nama Gudang</th>
+
+<th>Lokasi</th>
+
+<th>Kapasitas</th>
+
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabelGudang">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="js/warehouse.js"></script>
+
+</body>
+
+</html>
